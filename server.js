@@ -9,7 +9,12 @@ app.get('/', (req, res) => {
 });
 
 app.post("/", (req, res) => {
-    res.send('Thanks for posting that');
+
+    let num1 = req.body.num1;
+    let num2 = req.body.num2;
+
+    let result = num1 + num2
+    res.send(`The answer is ${result}`);
 })
 
 app.listen(3000, (req, res) => {
